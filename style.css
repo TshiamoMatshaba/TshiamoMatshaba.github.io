@@ -1,0 +1,187 @@
+/* --- Global Styles --- */
+:root {
+    --bg-dark: #050505;
+    --primary-blue: #1e3c72;
+    --accent-blue: #2a5298;
+    --text-white: #ffffff;
+    --text-muted: #a0aabf;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    line-height: 1.6;
+}
+
+/* --- Hero Section (The Cover Image Style) --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* The deep blue to black gradient */
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bg-dark) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* The Dot Matrix Effect */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(var(--text-white) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.05; /* Very subtle */
+    pointer-events: none;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--text-white);
+    margin-bottom: 20px;
+}
+
+.hero .certifications {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.hero .skills {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: transparent;
+    color: var(--text-white);
+    text-decoration: none;
+    border: 2px solid var(--text-white);
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--text-white);
+    color: var(--primary-blue);
+}
+
+/* --- Content Sections --- */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--accent-blue);
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+/* Glassmorphism Card Effect */
+.glass-card {
+    background: rgba(255, 255, 255, 0.03); /* Very transparent white */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-blue);
+}
+
+.glass-card h4 {
+    font-size: 1.4rem;
+    color: var(--text-white);
+    margin-bottom: 5px;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: var(--accent-blue);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+ul {
+    margin-left: 20px;
+    color: var(--text-muted);
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+.tech-stack {
+    font-size: 0.9rem;
+    color: var(--text-white);
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.btn-small {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: var(--accent-blue);
+    color: var(--text-white);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-small:hover {
+    background-color: var(--primary-blue);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
